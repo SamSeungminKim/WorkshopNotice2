@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang=\"ko\">
+<head>
+    <meta charset=\"UTF-8\">
+    <title>두산 중앙대 탄소중립 이노베이션 제11차 워크숍 초청장</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        .container { max-width: 600px; margin: 0 auto; }
+        h1 { text-align: center; }
+        form { margin-top: 20px; }
+        label { display: block; margin-bottom: 5px; }
+        input, select { width: 100%; padding: 8px; margin-bottom: 10px; }
+        button { padding: 10px 20px; background-color: #007BFF; color: white; border: none; cursor: pointer; }
+        button:hover { background-color: #0056b3; }
+        .message { text-align: center; font-size: 1.2em; margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <div class=\"container\">
+        <h1>워크샵 초청장</h1>
+        <p>안녕하십니까? 교수님들을 모시고 워크샵을 진행하고자 합니다. 참석 여부를 확인해주시기 바랍니다.</p>
+        <form id=\"registration-form\">
+            <label for=\"name\">성함:</label>
+            <input type=\"text\" id=\"name\" name=\"name\" required>
+            
+            <label for=\"email\">연락처(핸드폰):</label>
+            <input type=\"email\" id=\"mobile\" name=\"mobile\" required>
+          
+            <label for=\"email\">이메일:</label>
+            <input type=\"email\" id=\"email\" name=\"email\" required>
+            
+            <label for=\"affiliation\">소속:</label>
+            <input type=\"text\" id=\"affiliation\" name=\"affiliation\" required>
+            
+            <label for=\"attendance\">참석 여부:</label>
+            <select id=\"attendance\" name=\"attendance\" required>
+                <option value=\"yes\">참석</option>
+                <option value=\"no\">불참</option>
+            </select>
+            
+            <button type=\"submit\">등록</button>
+        </form>
+        <div class=\"message\" id=\"message\"></div>
+    </div>
+
+    <script>
+        document.getElementById('registration-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            document.getElementById('message').textContent = '등록해주셔서 감사합니다!';
+            // 여기에서 폼 데이터를 서버에 전송하거나 저장하는 코드를 추가할 수 있습니다.
+        });
+    </script>
+</body>
+</html>
+
+
+[Supported by Doosan AI Chat]
